@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Insert data</h1>
+	<form action="insert_data">
+		<table border = 1px solid black>
+			<tr>
+				<td>Enter Book Name</td>
+				<td><input type="text" name="book_name" required></td>
+			</tr>
+			<tr>
+				<td>Enter Book Price</td>
+				<td><input type="text" name="book_Price" required></td>
+			</tr>
+			<tr>
+				<td>HOw book purchased</td>
+				<td><input type="radio" name="book_buy" required>Rent <input
+					type="radio" name="book_buy" required>Buy</td>
+			</tr>
+			<tr>
+				<td>Bought/rent date</td>
+				<td><input type="date" name="book_date" required></td>
+			</tr>
+			<tr>
+				<td><label>Type Of Book</label></td>
+				<td><input type="checkbox" name="book_type" value = "Novel">Novel <input
+					type="checkbox" name="book_type" value = "Education">Education <input
+					type="checkbox" name="book_type" value = "Comic">Comic <input
+					type="checkbox" name="book_type" value = "Stories">Stories <input
+					type="checkbox" name="book_type" value = "Horror">Horror</td>
+			</tr>
+			<tr>
+				<td>Select Book Author Name</td>
+				<td><select name="author_name" required>
+						<option value = "">--Select--</option>
+						<option value="Bimal Jalal">Bimal Jalal</option>
+						<option value="Ruskin Bond">Ruskin Bond</option>
+						<option value="Vinit Karnik">Vinit Karnik</option>
+						<option value="Preeti Shenoy">Preeti Shenoy</option>
+						<option value="VP Venkaiah Naidu">VP Venkaiah Naidu</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="submit" required></td>
+				<td><input type="reset" name="reset" required></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
