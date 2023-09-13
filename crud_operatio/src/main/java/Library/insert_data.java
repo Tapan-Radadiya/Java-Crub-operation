@@ -45,8 +45,12 @@ public class insert_data extends HttpServlet {
 		}
 		String author_name = request.getParameter("author_name");
 		try {
+			String url = "Url to jdbc";
+			String user = "your User name";
+			String pass = "Your Pass"
+				
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3305/tapan","root","Tapan123");
+			Connection con = DriverManager.getConnection(url,user,pass);
 			String query = "INSERT INTO library(Book_name,Book_price,book_purchase,book_date,book_type,author_name) values(?,?,?,?,?,?)";
 			PreparedStatement pstmt = con.prepareStatement(query);
 			pstmt.setString(1, book_name);
