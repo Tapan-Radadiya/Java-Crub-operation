@@ -48,8 +48,13 @@ public class update_data extends HttpServlet {
 		}
 		String newAuthor = request.getParameter("newAuthor");
 		try {
+			
+			String url = "Url to jdbc";
+			String user = "your User name";
+			String pass = "Your Pass"
+				
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3305/tapan","root","Tapan123");
+			Connection con = DriverManager.getConnection(url,user,pass);
 			String query = "Update library set Book_name = ?,Book_price = ?,book_purchase = ?,book_date = ?,book_type = ?,author_name = ? where Book_id = "+id;
 			PreparedStatement pstmt = con.prepareStatement(query);
 			pstmt.setString(1, book_name);
