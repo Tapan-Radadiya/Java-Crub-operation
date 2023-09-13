@@ -35,8 +35,12 @@ public class Display_data extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		response.setContentType("text/html");
 		try {
+			String url = "Url to jdbc";
+			String user = "your User name";
+			String pass = "Your Pass"
+				
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3305/tapan","root","Tapan123");
+			Connection con = DriverManager.getConnection(url,user,pass);
 			String query = "SELECT * FROM library";
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(query);
