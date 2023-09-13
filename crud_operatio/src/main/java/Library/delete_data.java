@@ -36,8 +36,13 @@ public class delete_data extends HttpServlet {
 		response.setContentType("text/html");
 		int id = Integer.parseInt(request.getParameter("id"));
 		try {
+			
+			String url = "Url to jdbc";
+			String user = "your User name";
+			String pass = "Your Pass"
+				
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3305/tapan","root","Tapan123");
+			Connection con = DriverManager.getConnection(url,user,pass);
 			Statement st = con.createStatement();
 			String query = "DELETE FROM library WHERE Book_id = "+id;
 			st.executeUpdate(query);
